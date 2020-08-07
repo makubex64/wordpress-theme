@@ -50,7 +50,7 @@
         ?>
 
         <?php get_search_form(); ?>
-        <i class="icon fas fa-search"></i>
+        <!-- <i class="icon fas fa-search"></i> -->
 
 
         </div>

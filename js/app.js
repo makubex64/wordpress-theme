@@ -7,15 +7,22 @@ if (form){
 
 //set attribute form div
 function divForm(){
-	console.log(form)
+	// console.log(form)
 	const classDivForm = form.getElementsByTagName('div')[0].setAttribute('class', 'div-input');
 	const idDivForm    = form.getElementsByTagName('div')[0].setAttribute('id', 'div-input');
+	const divInput     = document.querySelector('.div-input');
+	console.log(divInput); 
+	if (divInput){
+		const elementIcon = document.createElement('i');
+		divInput.appendChild(elementIcon);
+		const iconTagName = document.getElementsByTagName('i')[1];
+		iconTagName.setAttribute('class', 'icon fas fa-search');
+		console.log(iconTagName)
+	}
 
 }
 divForm();
-
 //end set attribute form div
-
 
 //remove label form
 function myFunctionLabel(){
@@ -32,6 +39,7 @@ myFunctionLabel();
 const inputForm = document.querySelector('#s');
 if(inputForm){
 	inputForm.classList += 'input-search form-control mr-sm-2 ';
+	 
 }
 //end input search
 
