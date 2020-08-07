@@ -19,3 +19,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .screen-reader-text{
 	display: none;
 }
+#s{
+	position: relative;
+}
+.icon{
+	position: ;
+	left: -100px;
+}

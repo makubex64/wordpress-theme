@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/2e8ca638ec.js" crossorigin="anonymous"></script>
 
     <?php wp_head(); ?>
   </head>
@@ -14,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
 
 <div class="container">
-  <a class="navbar-brand text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>">Logo Corporativo</a>
+  <a class="navbar-brand text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fas fa-chalkboard"></i> Logo Corporativo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -49,6 +50,8 @@
         ?>
 
         <?php get_search_form(); ?>
+        <i class="icon fas fa-search"></i>
+
 
         </div>
 
