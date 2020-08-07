@@ -19,10 +19,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .screen-reader-text{
 	display: none;
 }
-/*#s{
-	position: relative;
+#s{
+	border-radius: 5px;
+
 }
-.icon{
-	position: ;
-	left: -100px;
-}*/
+#searchsubmit{
+	border-radius: 5px;
+	font-size: 14px;
+	height: 35px;
+}

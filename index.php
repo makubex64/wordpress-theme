@@ -19,6 +19,7 @@
 					}
 				 ?>
 				 <!-- end imagenes destacadas -->
+                 <hr>
 						
 				<!-- parrafo wordpress -->
     			<?php the_excerpt(); ?>
