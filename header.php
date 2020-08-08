@@ -20,6 +20,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  <?php get_search_form(); ?>
+
 
 
  <!--  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -49,8 +51,6 @@
         ) );
         ?>
 
-        <?php get_search_form(); ?>
-        <!-- <i class="icon fas fa-search"></i> -->
 
 
         </div>
