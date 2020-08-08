@@ -5,6 +5,8 @@
     	<div class="row">
     		<div class="col-lg-9 border border-secondary bg-light">
 
+                <?php masterslider(3); ?>
+
     			<!-- entrada loop -->
     			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     			<a href=" <?php the_permalink(); ?> "><h2><?php the_title(); ?></h2></a>
