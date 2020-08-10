@@ -15,7 +15,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
 
 <div class="container">
-  <a class="navbar-brand text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fas fa-chalkboard"></i> Logo Corporativo</a>
+  <a class="navbar-brand text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fas fa-chalkboard"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -59,6 +59,3 @@
 <!-- end navifation navbar -->
 
 <!-- theme glog -->
-<div class="container text-center mt-5">
-  <h2>Blog personalizado</h2>
-</div>

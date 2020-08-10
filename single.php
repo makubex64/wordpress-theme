@@ -1,48 +1,65 @@
 <?php get_header(); ?>
 
     <!-- entradas -->
-    <div class="container mt-5">
-    	<div class="row">
-    		<div class="col-lg-9">
+    	<div class="row" style="
+
+        padding: 120px;
+
+       background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        ">
+    		<div class="single-div col-lg-6">
 
     			<!-- entrada loop -->
     			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    			<h2><?php the_title(); ?></h2>
+    			<h2 class="text-white"><?php the_title(); ?></h2>
+                <?php the_excerpt(); ?>
+
     			<div class="card-body">
     			<p class="small mb-0 text-muted">Fecha: <?php the_time('F j, Y');?></p>
-    			<p class="small mb-0 text-muted">Autor: <?php the_author(); ?></p>
     			<p class="small mb-0 text-muted">Categorias: <?php the_category(' '); ?></p>
 
-    			<!-- imagenes destacadas -->
-    			<?php 
-    			if ( has_post_thumbnail() ) {
-					    the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid mb-3' ));
-					}
-				 ?>
-				 <!-- end imagenes destacadas -->
+    			
 						
-				<!-- contenido de la entrada en específico wordpress -->
-    			<?php the_content(); ?>
+				
+
+                 
+                </div>
+    			
+    			<!-- end entrada loop -->
+
+    		</div>
+            <div class="col-lg-6">
+                <!-- imagenes destacadas -->
+                <?php 
+                if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('post-thumbnails', 
+                            array( 'class' => 'img-fluid mb-3' ));
+                    }
+                 ?>
+                 <!-- end imagenes destacadas -->
+            </div>
+        </div>
+    
+        <div class="container mt-5">
+            <div class="row">
+            <div class="col-lg12">
+                <!-- contenido de la entrada en específico wordpress -->
+                <?php the_content(); ?>
 
                 <?php // If comments are open or we have at least one comment, load up the comment template.
                 if ( comments_open() || get_comments_number() ) :
                     comments_template();
                 endif;
                  ?>
-
-                 
-                </div>
-				<?php endwhile; endif; ?>
-    			
-    			<!-- end entrada loop -->
-
-    		</div>
-
-            
-
-
-    	</div>
-    </div>
+                
+            </div>
+        </div>
+        </div>
+        <?php endwhile; endif; ?>
 
  <?php get_footer(); ?> 
   </body>

@@ -28,15 +28,10 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 
  
- function tema_makubex_setup(){
+function tema_makubex_setup(){
   // soporte de imagenes
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
- 
-    // additional image sizes
-    // delete the next line if you do not need additional image sizes
-    add_image_size( 'category-thumb', 300, 9999 ); // 300 pixels wide (and unlimited height)
 
   }
   add_theme_support( 'title-tag' );

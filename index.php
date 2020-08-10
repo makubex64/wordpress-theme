@@ -2,31 +2,39 @@
 
     <!-- entradas -->
     <div class="container mt-5">
+
     	<div class="row">
-    		<div class="col-lg-9 border border-secondary bg-light">
+    		<div class="col-lg-9">
 
-                <?php masterslider(3); ?>
+            <!-- entrada loop -->
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <div class="card" style="width: 43rem;">
+            <a href=" <?php the_permalink(); ?> "><h2><?php the_title(); ?></h2></a>
 
-    			<!-- entrada loop -->
-    			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    			<a href=" <?php the_permalink(); ?> "><h2><?php the_title(); ?></h2></a>
-    			<div class="card-body">
-    			<p class="small mb-0 text-muted">Fecha: <?php the_time('F j, Y');?></p>
-    			<p class="small mb-0 text-muted">Autor: <?php the_author(); ?></p>
-    			<p class="small mb-0 text-muted">Categorias: <?php the_category(' '); ?></p>
-				<!-- imagenes destacadas -->
-    			<?php 
-    			if ( has_post_thumbnail() ) {
-					    the_post_thumbnail('thumbnail', array( 'class' => 'img-fluid mb-3' ));
-					}
-				 ?>
+            <!-- imagenes destacadas -->
+                <?php 
+                if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid mb-3' ));
+                    }
+                 ?>        
+                <div class="card-body">
+                <p class="small mb-0 text-muted">Fecha: <?php the_time('F j, Y');?></p>
+                <p class="small mb-0 text-muted">Autor: <?php the_author(); ?></p>
+                <p class="small mb-0 text-muted">Categorias: <?php the_category(' '); ?></p> 
+                <?php the_excerpt(); ?>
+
+                <a href="<?php the_permalink(); ?>" class="btn btn-primary">Seguir leyendo...</a>
+              </div>
+            </div>
+
+
+    			
+    			
+				
 				 <!-- end imagenes destacadas -->
                  <hr>
 						
 				<!-- parrafo wordpress -->
-    			<?php the_excerpt(); ?>
-    			<a href="<?php the_permalink(); ?>" class="btn btn-info mb-5">Seguír leyendo...</a>
-    			</div>
 				<?php endwhile; endif; ?>
     			
     			<!-- end entrada loop -->

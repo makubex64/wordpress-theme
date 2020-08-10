@@ -5,7 +5,6 @@ if (form){
 }
 //end add class form
 
-console.log(searchform);
 
 //set attribute form div
 function divForm(){
@@ -55,6 +54,17 @@ if(sidebarclass){
   });
 }
 //end add class list group sidebar widgets
+
+// single.php add class
+function single(){
+	const singleDiv = document.querySelector('.single-div');
+	const tagNameParrafo = document.getElementsByTagName('p')[0];
+	tagNameParrafo.setAttribute('class', ' text-white text-muted mt-5');
+	console.log(tagNameParrafo);
+
+}
+single();
+
 
 
 
