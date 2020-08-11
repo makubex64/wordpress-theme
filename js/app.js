@@ -51,6 +51,7 @@ if(sidebarclass){
    sidebarclass.classList += ' list-group list-group-flush ';
    sidebarclass.querySelectorAll('li').forEach(item =>{
    item.className += ' list-group-item ';
+
   });
 }
 //end add class list group sidebar widgets
@@ -60,10 +61,23 @@ function single(){
 	const singleDiv = document.querySelector('.single-div');
 	const tagNameParrafo = document.getElementsByTagName('p')[0];
 	tagNameParrafo.setAttribute('class', ' text-white text-muted mt-5');
-	console.log(tagNameParrafo);
-
 }
 single();
+
+// single.php add class content
+function textJustify(){
+	const contenidoPro = document.querySelector('.contenido-pro-col');
+	contenidoPro.querySelectorAll('p').forEach(item =>{
+		item.className += ' text-muted ';
+		console.log(item)
+		item.style.fontSize   = '20px';
+		item.style.lineHeight = '2';
+
+	});
+
+
+}
+textJustify();
 
 
 

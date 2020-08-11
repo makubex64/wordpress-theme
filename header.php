@@ -6,13 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://kit.fontawesome.com/2e8ca638ec.js" crossorigin="anonymous"></script>
-
+    
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
 
 <!-- navigation navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between"   style="
+    padding: 12px;
+
+">
 
 <div class="container">
   <a class="navbar-brand text-white" href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fas fa-chalkboard"></i></a>

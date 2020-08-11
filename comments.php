@@ -1,5 +1,5 @@
 
-<h5 class="text-muted">Comentarios   <?php comments_number( 'sin comentarios', 'un comentario', '% comentarios' ); ?>.
+<h5 class="text-muted mt-5"><?php comments_number( 'sin comentarios', 'un comentario', '% comentarios' ); ?>.
 </h5>
 <hr>
 

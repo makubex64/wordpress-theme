@@ -5,9 +5,11 @@
 
         padding: 120px;
 
-       background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 
 
         ">
@@ -44,9 +46,9 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
             </div>
         </div>
     
-        <div class="container mt-5">
-            <div class="row">
-            <div class="col-lg12">
+        <div class="contenido-pro container mt-5">
+            <div class="contenido-pro-row row">
+            <div class="contenido-pro-col col-lg-12 text-justify ">
                 <!-- contenido de la entrada en específico wordpress -->
                 <?php the_content(); ?>
 
