@@ -76,6 +76,7 @@ function textJustify(){
 }
 textJustify();
 
+<<<<<<< HEAD
 function replyForm(){
 const media = document.querySelectorAll('.media .media-body span .comment-reply-link');
 const media2 = document.querySelectorAll('.media .media-body span .comment-edit-link');
@@ -89,5 +90,36 @@ if (media && media2){
 }
 }
 replyForm();
+=======
+// comments.php add class 
+function addShadow(){
+	const formComments = document.querySelector('#commentform');
+	if(formComments){
+		formComments.className += ' shadow p-3 mb-5 bg-white rounded col-lg-6';
+		const labelForm = document.getElementsByTagName('label')[0];
+		labelForm.remove();
+
+		const textArea    = document.querySelector('#comment');
+		const author      = document.querySelector('#author');
+		const email       = document.querySelector('#email');
+		const web         = document.querySelector('#url');
+
+		if(author && email && web && textArea){
+			textArea.setAttribute('class', ' form-control ')
+			author.setAttribute('class', 'form-control');
+			email.setAttribute('class', 'form-control');
+			web.setAttribute('class', 'form-control');
+		}
+	}
+	const media       = document.querySelector('.media .media-body span')
+	// const buttonReply = document.querySelectorAll('a');
+	console.log(media)
+	
+	
+
+}
+addShadow();
+
+>>>>>>> dfba7c84a63a5c0710298a78165cecfae10cf916
 
 
