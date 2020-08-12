@@ -69,16 +69,41 @@ function textJustify(){
 	const contenidoPro = document.querySelector('.contenido-pro-col');
 	contenidoPro.querySelectorAll('p').forEach(item =>{
 		item.className += ' text-muted ';
-		console.log(item)
 		item.style.fontSize   = '20px';
 		item.style.lineHeight = '2';
 
 	});
-
-
 }
 textJustify();
 
+// comments.php add class 
+function addShadow(){
+	const formComments = document.querySelector('#commentform');
+	if(formComments){
+		formComments.className += ' shadow p-3 mb-5 bg-white rounded col-lg-6';
+		const labelForm = document.getElementsByTagName('label')[0];
+		labelForm.remove();
+
+		const textArea    = document.querySelector('#comment');
+		const author      = document.querySelector('#author');
+		const email       = document.querySelector('#email');
+		const web         = document.querySelector('#url');
+
+		if(author && email && web && textArea){
+			textArea.setAttribute('class', ' form-control ')
+			author.setAttribute('class', 'form-control');
+			email.setAttribute('class', 'form-control');
+			web.setAttribute('class', 'form-control');
+		}
+	}
+	const media       = document.querySelector('.media .media-body span')
+	// const buttonReply = document.querySelectorAll('a');
+	console.log(media)
+	
+	
+
+}
+addShadow();
 
 
 
