@@ -69,16 +69,25 @@ function textJustify(){
 	const contenidoPro = document.querySelector('.contenido-pro-col');
 	contenidoPro.querySelectorAll('p').forEach(item =>{
 		item.className += ' text-muted ';
-		console.log(item)
 		item.style.fontSize   = '20px';
 		item.style.lineHeight = '2';
 
 	});
-
-
 }
 textJustify();
 
-
+function replyForm(){
+const media = document.querySelectorAll('.media .media-body span .comment-reply-link');
+const media2 = document.querySelectorAll('.media .media-body span .comment-edit-link');
+if (media && media2){
+	media.forEach(item =>{
+	item.className += ' btn btn-outline-info '
+	});
+	media2.forEach(item =>{
+	item.className += ' btn btn-outline-warning '
+	})
+}
+}
+replyForm();
 
 
