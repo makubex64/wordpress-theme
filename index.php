@@ -1,38 +1,28 @@
 <?php get_header(); ?>
 
     <!-- entradas -->
-    <div class="container mt-5">
+    <div class="container mt-5 img-fluid">
 
-    	<div class="row">
-    		<div class="col-lg-9">
+    <div class="row img-fluid">
+    <div class="col-lg-9 mt-5 img-fluid">
 
-            <!-- entrada loop -->
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="card" style="width: 43rem;">
-            <a href=" <?php the_permalink(); ?> "><h2><?php the_title(); ?></h2></a>
-
-            <!-- imagenes destacadas -->
-                <?php 
-                if ( has_post_thumbnail() ) {
-                        the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid mb-3' ));
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="entradas card" style="width: 35rem;">
+            <a href="<?php the_permalink(); ?>">
+            <?php if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid mb-0' ));
                     }
-                 ?>        
-                <div class="card-body">
+                 ?> 
+                 </a>                 
+                <div class="entradas-documentacion card-body">
                 <p class="small mb-0 text-muted">Fecha: <?php the_time('F j, Y');?></p>
-                <p class="small mb-0 text-muted">Autor: <?php the_author(); ?></p>
-                <p class="small mb-0 text-muted">Categorias: <?php the_category(' '); ?></p> 
-                <?php the_excerpt(); ?>
-
+                <p class="small mb-0 text-muted">Categorias: <?php the_category(' '); ?></p>
+                <a href="<?php the_permalink(); ?>"><h5  class="card-title"><?php the_title(); ?></h5></a>  
+                <p class=" text-muted"><?php the_excerpt(); ?></p>
                 <a href="<?php the_permalink(); ?>" class="btn btn-primary">Seguir leyendo...</a>
-              </div>
-            </div>
-
-
-    			
-    			
-				
-				 <!-- end imagenes destacadas -->
-                 <hr>
+                </div>
+                </div>
+                <hr>
 						
 				<!-- parrafo wordpress -->
 				<?php endwhile; endif; ?>
@@ -44,8 +34,8 @@
     		<?php get_sidebar(); ?>
     		<!-- end sidebar -->
     	</div>
-
     </div>
+
 
 <!-- pagination -->
 <div class="container mb-5 py-5">

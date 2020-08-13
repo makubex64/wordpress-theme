@@ -67,12 +67,14 @@ single();
 // single.php add class content
 function textJustify(){
 	const contenidoPro = document.querySelector('.contenido-pro-col');
+	if (contenidoPro){
 	contenidoPro.querySelectorAll('p').forEach(item =>{
 		item.className += ' text-muted ';
 		item.style.fontSize   = '20px';
 		item.style.lineHeight = '2';
 
-	});
+		});
+	}	
 }
 textJustify();
 
@@ -91,19 +93,30 @@ function addShadow(){
 
 		if(author && email && web && textArea){
 			textArea.setAttribute('class', ' form-control ')
-			author.setAttribute('class', 'form-control');
-			email.setAttribute('class', 'form-control');
-			web.setAttribute('class', 'form-control');
+			author.setAttribute('class', ' form-control ');
+			email.setAttribute('class', ' form-control ');
+			web.setAttribute('class', ' form-control ');
 		}
 	}
-	const media       = document.querySelector('.media .media-body span')
-	// const buttonReply = document.querySelectorAll('a');
-	console.log(media)
 	
-	
-
 }
 addShadow();
+
+// index.php img content
+function imageSize(){
+	const entradas = document.querySelectorAll('.entradas img');
+	// if (entradas){
+		
+	// }
+	entradas.forEach(item =>{
+	item.style.height    = '300px';
+	item.style.maxHeight = '20%';
+	console.log(item)
+
+	});
+}
+imageSize();
+
 
 
 
