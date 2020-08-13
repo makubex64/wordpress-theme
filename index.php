@@ -7,7 +7,7 @@
     <div class="col-lg-9 mt-5 img-fluid">
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="entradas card" style="width: 35rem;">
+        <div class="entradas card mb-3 shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
             <a href="<?php the_permalink(); ?>">
             <?php if ( has_post_thumbnail() ) {
                         the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid mb-0' ));
@@ -21,18 +21,18 @@
                 <p class=" text-muted"><?php the_excerpt(); ?></p>
                 <a href="<?php the_permalink(); ?>" class="btn btn-primary">Seguir leyendo...</a>
                 </div>
-                </div>
-                <hr>
-						
-				<!-- parrafo wordpress -->
-				<?php endwhile; endif; ?>
-    			
-    			<!-- end entrada loop -->
 
+                </div>
+                <?php endwhile; endif; ?>
+
+
+                <hr>
+              </div>
+            <?php get_sidebar(); ?>
+
+
+            </div>
     		</div>
-			<!-- sidebar -->
-    		<?php get_sidebar(); ?>
-    		<!-- end sidebar -->
     	</div>
     </div>
 
@@ -40,10 +40,8 @@
 <!-- pagination -->
 <div class="container mb-5 py-5">
     <!-- llamar subcarpta -->
-
     <div class="col-lg-9 float-right mb-5">
-        <?php get_template_part('template-parts/content', 'pagination'); ?>
-
+    <?php get_template_part('template-parts/content', 'pagination'); ?>
     </div>
 
 </div>

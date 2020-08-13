@@ -118,5 +118,35 @@ function imageSize(){
 imageSize();
 
 
+//add class button comment reply and edit
+function replyForm(){
+const mediaContent = document.querySelectorAll('.media');
+const media        = document.querySelectorAll('.media .media-body span .comment-reply-link');
+const media2       = document.querySelectorAll('.media .media-body span .comment-edit-link');
+const img          = document.querySelectorAll('.media .mr-3 img');
+const titleComment = document.querySelector('#reply-title');
+const submitButton = document.querySelector('#submit');
+
+console.log(mediaContent)
+submitButton.className += ' btn btn-outline-info ';
+titleComment.className += ' alert alert-info col-lg-6 ';
+
+if (media && media2 && img){
+	media.forEach(item =>{
+	item.className += ' btn btn-outline-info '
+	});
+	media2.forEach(item =>{
+	item.className += ' btn btn-outline-warning '
+		});
+	img.forEach(item =>{
+	item.className += ' rounded-circle '
+		});
+	mediaContent.forEach(item =>{
+	item.className += ' shadow p-3 mb-5 bg-white rounded col-lg-6 '
+	})
+	}
+}
+replyForm();
+
 
 

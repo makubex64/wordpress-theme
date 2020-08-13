@@ -44,7 +44,7 @@ add_action( 'after_setup_theme', 'tema_makubex_setup' );
     register_sidebar( array(
         'name'          => __( 'Primary Sidebar', 'theme_name' ),
         'id'            => 'sidebar-1',
-        'before_widget' => '<div class="card-body sidebar-class text-muted">',
+        'before_widget' => '<div class="card-body sidebar-class text-muted rounded-lg">',
         'after_widget'  => '</div>',
         'before_title'  => '<h5>',
         'after_title'   => '</h5><hr>',
