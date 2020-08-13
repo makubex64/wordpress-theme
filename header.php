@@ -13,7 +13,7 @@
 
 <!-- navigation navbar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between"   style="
-    padding: 12px;
+    padding: 5px;
 
 ">
 

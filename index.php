@@ -3,18 +3,18 @@
     <!-- entradas -->
     <div class="container mt-5">
 
-    	<div class="row">
-    		<div class="col-lg-9">
+    	<div class="row bg-danger">
+    		<div class="col-lg-9 mt-5">
 
             <!-- entrada loop -->
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="card" style="width: 43rem;">
+            <div class="card mt-1" style="width: 43rem;">
             <a href=" <?php the_permalink(); ?> "><h2><?php the_title(); ?></h2></a>
 
             <!-- imagenes destacadas -->
                 <?php 
                 if ( has_post_thumbnail() ) {
-                        the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid mb-3' ));
+                        the_post_thumbnail('post-thumbnails', array( 'class' => 'img-fluid mb-3 rounded-lg' ));
                     }
                  ?>        
                 <div class="card-body">
@@ -32,7 +32,6 @@
     			
 				
 				 <!-- end imagenes destacadas -->
-                 <hr>
 						
 				<!-- parrafo wordpress -->
 				<?php endwhile; endif; ?>

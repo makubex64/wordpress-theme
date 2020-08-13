@@ -76,21 +76,6 @@ function textJustify(){
 }
 textJustify();
 
-<<<<<<< HEAD
-function replyForm(){
-const media = document.querySelectorAll('.media .media-body span .comment-reply-link');
-const media2 = document.querySelectorAll('.media .media-body span .comment-edit-link');
-if (media && media2){
-	media.forEach(item =>{
-	item.className += ' btn btn-outline-info '
-	});
-	media2.forEach(item =>{
-	item.className += ' btn btn-outline-warning '
-	})
-}
-}
-replyForm();
-=======
 // comments.php add class 
 function addShadow(){
 	const formComments = document.querySelector('#commentform');
@@ -111,15 +96,38 @@ function addShadow(){
 			web.setAttribute('class', 'form-control');
 		}
 	}
-	const media       = document.querySelector('.media .media-body span')
-	// const buttonReply = document.querySelectorAll('a');
-	console.log(media)
-	
-	
-
 }
 addShadow();
 
->>>>>>> dfba7c84a63a5c0710298a78165cecfae10cf916
+//add class button comment reply and edit
+function replyForm(){
+const mediaContent = document.querySelectorAll('.media');
+const media        = document.querySelectorAll('.media .media-body span .comment-reply-link');
+const media2       = document.querySelectorAll('.media .media-body span .comment-edit-link');
+const img          = document.querySelectorAll('.media .mr-3 img');
+const titleComment = document.querySelector('#reply-title');
+const submitButton = document.querySelector('#submit');
+
+console.log(mediaContent)
+submitButton.className += ' btn btn-outline-info ';
+titleComment.className += ' alert alert-info col-lg-6 ';
+
+if (media && media2 && img){
+	media.forEach(item =>{
+	item.className += ' btn btn-outline-info '
+	});
+	media2.forEach(item =>{
+	item.className += ' btn btn-outline-warning '
+		});
+	img.forEach(item =>{
+	item.className += ' rounded-circle '
+		});
+	mediaContent.forEach(item =>{
+	item.className += ' shadow p-3 mb-5 bg-white rounded col-lg-6 '
+	})
+	}
+}
+replyForm();
+
 
 
