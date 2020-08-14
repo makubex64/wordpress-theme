@@ -6,6 +6,7 @@
     <div class="col-lg-7 mt-5 img-fluid">
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <div class="container">
         <div class="entradas card mb-3 shadow p-3 mb-5 bg-white rounded" style="
         width: 32rem;
         margin-left: 5px;
@@ -25,6 +26,8 @@
                 </div>
 
                 </div>
+                </div>
+
                 <?php endwhile; endif; ?>
 
 
